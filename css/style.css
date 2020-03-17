@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+}
+
+.container-fw {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #1e2d3b;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+header {
+  height: 80px;
+  width: 100%;
+  background-color: #2e3a46;
+  display: flex;
+  align-items: center;
+}
+
+.fa-spotify {
+  font-size: 35px;
+  color: green;
+  padding-left: 20px;
+}
+
+select {
+  margin-left: 30px;
+}
+
+.container-albums {
+  width: 900px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 10px;
+  justify-content: center;
+}
+
+.card {
+  height: 300px;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+  justify-content: space-evenly;
+  background-color: #2e3a46;
+  border-radius: 5px;
+}
+
+.card h3 {
+  color: whitesmoke;
+  letter-spacing: 2px;
+}
+
+.card span {
+  color: rgb(161, 161, 161);
+  letter-spacing: 2px;
+}
+
+.card img {
+  height: 200px;
+  width: 160px;
+}
