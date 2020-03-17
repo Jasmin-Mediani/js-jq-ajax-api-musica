@@ -12,7 +12,7 @@
   background-color: #1e2d3b;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 header {
@@ -25,7 +25,7 @@ header {
 
 .fa-spotify {
   font-size: 35px;
-  color: green;
+  color: #75d26c;
   padding-left: 20px;
 }
 
@@ -47,7 +47,7 @@ select {
 }
 
 .card {
-  height: 300px;
+  height: 350px;
   width: 180px;
   display: flex;
   flex-direction: column;
@@ -61,6 +61,9 @@ select {
 .card h3 {
   color: whitesmoke;
   letter-spacing: 2px;
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
 }
 
 .card span {
