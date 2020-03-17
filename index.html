@@ -20,7 +20,7 @@
     <div class="container-fw">
       <header>
         <i class="fab fa-spotify"></i>
-        <select id="scegli-genere">
+        <select class="scegli-genere">
           <option value="">Seleziona un genere</option>
           <option value="pop">pop</option>
           <option value="rock">rock</option>
@@ -37,7 +37,7 @@
 
     <!---------- TEMPLATE DI HANDLEBARS --------->
     <script id="template-card" type="text/x-handlebars-template">
-      <div class="card">
+      <div class="card" data-genere="{{genere}}">
         <img
           src="{{immagine}}"
           alt=""

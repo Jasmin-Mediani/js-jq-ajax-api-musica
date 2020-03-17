@@ -1,6 +1,9 @@
 $(document).ready(function () {
 
 
+
+    ////////////////// HANDLEBARS IN AJAX //////////////////
+
     var source = $("#template-card").html();
     var templateCard = Handlebars.compile(source); //MEMO: è #template-card svuotato dei campi personalizzabili
 
@@ -32,6 +35,28 @@ $(document).ready(function () {
             alert("Errore!");
         }
 
+    });
+
+
+
+    //////////////// SCELTA GENERE MUSICALE /////////////////
+
+    $(".scegli-genere").change(function () {
+        var genereSelezionato = $(this).val();
+
+        //senza.toLowerCase non funziona
+
+        if (genereSelezionato == "") {
+            $(".card").show();
+        } else {
+            $(".card").each(function () {
+                if (genereSelezionato.toLowerCase() == $(this).data("genere").toLowerCase()) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
+        }
     });
 
 
