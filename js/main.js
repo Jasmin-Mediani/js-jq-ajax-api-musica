@@ -14,7 +14,7 @@ $(document).ready(function () {
         success: function (datiInarrivo) {
             var tuttiGliAlbum = datiInarrivo.response; //è un array di oggetti.  Il singolo album (l'esimo) sarà i. 
 
-            for (i = 0; i < tuttiGliAlbum.length; i++) {
+            for (var i = 0; i < tuttiGliAlbum.length; i++) {
                 var singoloAlbum = tuttiGliAlbum[i];
                 var infoCard = {
                     immagine: singoloAlbum.poster,
@@ -41,23 +41,28 @@ $(document).ready(function () {
 
     //////////////// SCELTA GENERE MUSICALE /////////////////
 
+
+
     $(".scegli-genere").change(function () {
         var genereSelezionato = $(this).val();
-
-        //senza.toLowerCase non funziona
-
         if (genereSelezionato == "") {
             $(".card").show();
         } else {
+
             $(".card").each(function () {
-                if (genereSelezionato.toLowerCase() == $(this).data("genere").toLowerCase()) {
+
+                if ($(this).data("genere").toLowerCase() == genereSelezionato.toLowerCase()) {
                     $(this).show();
                 } else {
                     $(this).hide();
                 }
+
             });
+
         }
-    });
+
+    })
+
 
 
 
